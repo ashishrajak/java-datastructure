@@ -1,0 +1,13 @@
+class Divide
+{
+  public static void main(String[] args)
+  {
+  System.out.print("Divide the two number");
+  int a=64;
+  int b=16;
+  float z;
+  z=(float)a/b;
+  System.out.print(z);
+    
+  }
+}
