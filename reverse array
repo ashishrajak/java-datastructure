@@ -1,0 +1,44 @@
+class ar{
+
+public static  void replace(int array[],int b,int c){
+    for(int i=0;i<array.length;i++){
+        if(i==c){
+            array[i-1]=b;
+        }
+    }
+}
+    public static void main(String []args){
+        int c;
+        int ary[]=new int[]{1,45,74543,4556,456,75,57,56,};
+        for(int i=0;i<ary.length;i++){
+            System.out.print(ary[i]+",");
+        }
+        System.out.println(" ");
+        for(int i=0;i<ary.length/2;i++){
+            
+            c=ary[i];
+            
+            ary[i]=ary[ary.length-1-i];
+            ary[ary.length-1-i]=c;
+            System.out.print(ary[i]+",");
+        }
+        System.out.println(" ");
+        for(int i=0;i<ary.length;i++){
+            System.out.print(ary[i]+",");
+        }
+        for(int i=0;i<ary.length/2;i++){
+            
+            c=ary[i];
+            
+            ary[i]=ary[ary.length-1-i];
+            ary[ary.length-1-i]=c;
+            System.out.print(ary[i]+",");
+        }
+        
+        replace(ary, 65487, 4);
+        System.out.println(" ");
+        for(int i=0;i<ary.length;i++){
+            System.out.print(ary[i]+",");
+        }
+    }
+}
