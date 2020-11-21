@@ -1,0 +1,59 @@
+class Assending{
+  
+    public static void main(String []args){
+        int rray[]=new int[16];
+        int c;
+        int array[]=new int[]{12,2222,45,56,67,89,90,55,5474,534,87686,4534,876,543,78,5647,};
+        for(int j=0;j<array.length;j++){
+           c=array[j];
+            for(int k=0;k<array.length;k++){
+                if(array[k]>c){
+                    c=array[k];
+                    
+                    
+                }
+
+            }
+            System.out.print(c+",");
+           rray[j]=c;
+            for(int v=0;v<array.length;v++){
+                if(array[v]==c){
+                    array[v]=0;
+                }
+            }
+           
+        }
+ 
+        System.out.println(" ");
+        for(int g=0;g<rray.length;g++){
+            
+            System.out.print(rray[g]+",");
+            
+        }
+        System.out.println(" ");
+        for(int g=0;g<rray.length;g++){
+            
+            System.out.print(array[g]+",");
+            
+        }
+        add(rray,6,6);
+    }
+      
+public static void add(int rry[],int r,int h){
+    int addd[]=new int[17];  
+    for(int i=0;i<addd.length;i++){
+        if(i==r){
+            addd[i]=h;
+        }
+        if(i<r){
+            addd[i]=rry[i];
+        }
+        else{
+            addd[i]=rry[i+1];
+        }
+    }
+    for(int i=0;i<addd.length;i++){
+        System.out.print(addd[i]);
+    } 
+}
+}
