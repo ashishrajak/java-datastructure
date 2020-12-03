@@ -1,0 +1,41 @@
+public class Queeue{
+    public void add(int array[],int a){
+        for(int i=0;i<array.length;i++){
+            if(i==0){
+                array[i]=0;
+            }
+            if(i<array.length-1){
+                array[i]=array[i+1];
+            }
+            if(i==array.length-1){
+                array[i]=a;
+            }
+            
+            
+        }
+        
+    }
+    public void printt(int array[]){
+        for(int i=0;i<array.length;i++){
+            System.out.print(array[i]+"-->");
+        }
+    }
+    public static void main(String [] args){
+        int array[]=new int[]{2,545,254,756,766,3,76,3658,98,99};
+        Queeue ar=new Queeue();
+         ar.add(array, 20);
+        
+         ar.add(array, 20);
+          ar.add(array, 20);
+           ar.add(array, 20);
+            ar.add(array, 20);
+             ar.add(array, 20);
+              ar.add(array, 20);
+               ar.add(array, 20);
+               ar.printt(array);
+               
+        System.out.println(array.length);
+
+
+    }
+}
