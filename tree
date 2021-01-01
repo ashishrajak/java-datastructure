@@ -1,0 +1,59 @@
+public class tree {
+    public static class tre{
+        int data;
+        tre left;
+        tre right;
+        public tre(int data){
+            this.data=data;
+            this.left=null;
+            this.right=null;
+        }
+        public tre(){
+            
+            this.right=null;
+            this.left=null;
+        }
+    }
+
+    public void add(tre head,int b){
+        tre current=head;
+        tre da=new tre(b);
+        if(current.left!=null){
+            current.right=da;
+        }
+        if(current.left==null){
+            current.left=da;
+        }
+        
+        
+    }
+    public int print(tre head){
+       
+        System.out.println(head.data);
+        if(head.right!=null){
+            print(head.right);
+            
+        }
+        if(head.left!=null){
+           
+            print(head.left);
+        }
+        return head.data;
+    }
+    
+    public static void main(String [] args){
+        System.out.println("heloo");
+        tre head=new tre(40);
+        tre one=new tre(30);
+        tre two=new tre(88);
+        head.right=one;
+        head.left=two;
+        tree tree=new tree();
+        tree.add(two, 3333);
+        tree.add(one, 1);
+        tree.add(one, 225);
+        tree.print(head);
+
+
+    }
+}
