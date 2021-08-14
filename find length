@@ -1,0 +1,63 @@
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    // Complete the appendAndDelete function below.
+    static String appendAndDelete(String s, String t, int k) {
+         int sl=s.length();
+         int tl=t.length();
+        int ll=sl>tl?tl:sl;
+        int m;
+        for(m=0;m<ll;m++)
+            {
+            if(s.charAt(m)!=t.charAt(m))break;
+               
+        }
+        
+        int sleft=sl-m;
+        int tleft=tl-m;
+        
+        int flag=0;
+        
+        if(sleft+tleft>k)flag=1;
+       else
+           {
+           int sub=k-(sleft+tleft);
+           if((sub%2!=0) && !(sub>2*m))flag=1;
+       }
+        
+        if(flag==0)
+            return "Yes";
+        else 
+            return "No";
+           
+    }
+
+    private static final Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) throws IOException {
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+
+        String s = scanner.nextLine();
+
+        String t = scanner.nextLine();
+
+        int k = scanner.nextInt();
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+
+        String result = appendAndDelete(s, t, k);
+
+        bufferedWriter.write(result);
+        bufferedWriter.newLine();
+
+        bufferedWriter.close();
+
+        scanner.close();
+    }
+}
